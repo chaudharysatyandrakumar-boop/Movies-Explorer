@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Movie Explorer - Discover and explore movies using live movie data.">
+    <title>Movie Explorer | Discover Movies</title>
+
+    <!-- Connect the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Connect JavaScript after HTML parsing -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Main website header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">MOVIE<span>EXPLORER</span></a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section with movie search -->
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <p class="subtitle">YOUR MOVIE DISCOVERY PLATFORM</p>
+
+                <h1>Discover Your Next <span>Favorite Movie</span></h1>
+
+                <p class="hero-description">
+                    Explore movies, discover new stories and find
+                    information about your favorite films.
+                </p>
+
+                <!-- Movie search form -->
+                <form id="searchForm" class="search-form">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search for a movie..."
+                        aria-label="Movie title"
+                        required
+                    >
+
+                    <button type="submit">Search Movies</button>
+                </form>
+
+                <p id="searchMessage" class="message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- Movie results section -->
+        <section class="movies-section container" id="movies">
+
+            <div class="section-heading">
+                <div>
+                    <p class="subtitle">EXPLORE THE COLLECTION</p>
+                    <h2>Discover Movies</h2>
+                </div>
+
+                <!-- Movie type filter -->
+                <select id="typeFilter" aria-label="Filter by movie type">
+                    <option value="">All Types</option>
+                    <option value="movie">Movies</option>
+                    <option value="series">Series</option>
+                    <option value="episode">Episodes</option>
+                </select>
+            </div>
+
+            <!-- Movie cards will be added dynamically -->
+            <div id="movieResults" class="movie-grid"></div>
+
+            <!-- Pagination controls -->
+            <div id="pagination" class="pagination"></div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <h3>MOVIE EXPLORER</h3>
+            <p>Discover movies. Explore stories. Find your favorites.</p>
+            <p>Powered by OMDb API | Educational Project 2a</p>
+        </div>
+    </footer>
+
+</body>
+</html>

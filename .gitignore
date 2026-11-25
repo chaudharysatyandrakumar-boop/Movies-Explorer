@@ -1,0 +1,17 @@
+
+# Ignore private environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore dependencies
+node_modules/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore editor settings
+.vscode/
+# Netlify local configuration
+.netlify/
